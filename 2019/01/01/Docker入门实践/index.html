@@ -6,15 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | 郭魏魏的个人博客</title>
+  <title>Docker入门实践 | 郭魏魏的个人博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="郭魏魏的个人博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="​Docker是一种新兴的虚拟化技术， 属于 Linux 容器的一种封装，提供简单易用的容器使用接口。从某种程度上可以理解成一个小型的虚拟机。 相比较于传统的虚拟机它有着：  启动时间快：Docker容器应用直接运行与宿主内核，不需要启动完整的操作系统，因此可以做到秒级、甚至毫秒级的启动时间。大大的节约了开发、测试、部署的时间。 更高效的利用系统资源：容器只占用需要的资源，不占用那些没有用到的资源">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker入门实践">
+<meta property="og:url" content="http://yoursite.com/2019/01/01/Docker入门实践/index.html">
 <meta property="og:site_name" content="郭魏魏的个人博客">
+<meta property="og:description" content="​Docker是一种新兴的虚拟化技术， 属于 Linux 容器的一种封装，提供简单易用的容器使用接口。从某种程度上可以理解成一个小型的虚拟机。 相比较于传统的虚拟机它有着：  启动时间快：Docker容器应用直接运行与宿主内核，不需要启动完整的操作系统，因此可以做到秒级、甚至毫秒级的启动时间。大大的节约了开发、测试、部署的时间。 更高效的利用系统资源：容器只占用需要的资源，不占用那些没有用到的资源">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2019/01/01/Docker入门实践/docker-relation.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/01/Docker入门实践/docker-install.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/01/Docker入门实践/logo.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/01/Docker入门实践/nginx.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/01/Docker入门实践/imagels.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/01/Docker入门实践/container.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/01/Docker入门实践/image-push.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/01/Docker入门实践/docker-hub.jpg">
+<meta property="og:updated_time" content="2019-01-01T07:02:49.293Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="郭魏魏的个人博客">
+<meta name="twitter:title" content="Docker入门实践">
+<meta name="twitter:description" content="​Docker是一种新兴的虚拟化技术， 属于 Linux 容器的一种封装，提供简单易用的容器使用接口。从某种程度上可以理解成一个小型的虚拟机。 相比较于传统的虚拟机它有着：  启动时间快：Docker容器应用直接运行与宿主内核，不需要启动完整的操作系统，因此可以做到秒级、甚至毫秒级的启动时间。大大的节约了开发、测试、部署的时间。 更高效的利用系统资源：容器只占用需要的资源，不占用那些没有用到的资源">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/01/Docker入门实践/docker-relation.jpg">
   
     <link rel="alternative" href="/atom.xml" title="郭魏魏的个人博客" type="application/atom+xml">
   
@@ -133,49 +146,311 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Docker入门实践" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/01/01/Docker入门实践/" class="archive-article-date">
-  	<time datetime="2019-01-01T05:44:58.347Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/01/01/Docker入门实践/">Docker入门实践</a>
+    <h1 class="article-title" itemprop="name">
+      Docker入门实践
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2019/01/01/Docker入门实践/" class="archive-article-date">
+  	<time datetime="2019-01-01T05:44:58.347Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>​Docker是一种新兴的虚拟化技术， 属于 Linux 容器的一种封装，提供简单易用的容器使用接口。从某种程度上可以理解成一个小型的虚拟机。 相比较于传统的虚拟机它有着：</p>
+<ul>
+<li><strong>启动时间快</strong>：Docker容器应用直接运行与宿主内核，不需要启动完整的操作系统，因此可以做到秒级、甚至毫秒级的启动时间。大大的节约了开发、测试、部署的时间。</li>
+<li><strong>更高效的利用系统资源</strong>：容器只占用需要的资源，不占用那些没有用到的资源；虚拟机由于是完整的操作系统，不可避免要占用所有资源。另外，多个容器可以共享资源，虚拟机都是独享资源。</li>
+<li><strong>体积小</strong>：容器只需要包含用到的组件， 虚拟机需要打包整个完整的操作系统，所以容器文件比虚拟机文件要小很多，相对的系统的支持量也会高很多。</li>
+</ul>
+<a id="more"></a>
+<h4 id="Docker用途"><a href="#Docker用途" class="headerlink" title="Docker用途"></a>Docker用途</h4><p>Docker 的主要用途，目前有三大类。</p>
+<p><strong>1. 提供一次性的环境</strong>：比如，本地测试他人的软件、持续集成的时候提供单元测试和构建的环境。</p>
+<p><strong>2. 提供弹性的云服务</strong>：因为 Docker 容器可以随开随关，很适合动态扩容和缩容。</p>
+<p><strong>3. 组建微服务架构</strong>：通过多个容器，一台机器可以跑多个服务，因此在本机就可以模拟出微服务架构</p>
+<h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><p>Docker的基本概念包含镜像、容器、仓库。容器由镜像实例化生成， 镜像来源于仓库。从我们的角度我们可以把镜像当成一个类， 容器当成是类生成的一个实例对象。三者的关系如下图所示：</p>
+<p><img src="/2019/01/01/Docker入门实践/docker-relation.jpg" alt="关系"></p>
+<blockquote>
+<p>镜像（Image）</p>
+</blockquote>
+<p>Docker镜像是一个特殊的文件系统， 相当于是一个独立的模版， 提供容器运行时所需要的一些配置和数据， 同时也可以用于生成新的容器。它是一个静态只读的系统文件， 一旦创建就不可更改。</p>
+<p>Docker镜像利用<a href="https://en.wikipedia.org/wiki/Union_mount" target="_blank" rel="noopener">Union FS</a> 技术设计成多层存储，构建是一层一层构建，构建完就不可以更改。基于其多层存储的结构特点， 我们可以方便的复用已存在的镜像去构建生成新的镜像， 也可以通过Dockerfile文件直接构建一个新的镜像。</p>
+<blockquote>
+<p>容器（Container）</p>
+</blockquote>
+<p>容器是镜像实体化的表现， 它的本质是一个进程。区别于直接在宿主机环境下运行， 容器内的进程运行都有一个独立的命名空间， 与外部隔离， 无需依赖宿主机， 所以相对来说容器封装的应用会更加安全， 而不必去考虑环境的问题。</p>
+<p>容器同样是多层存储的形态， 基于镜像基础层， 在其上构建容器存储层， 用于容器读写运行存储。容器存储层会随着容器的消失而消失， 当然数据也不复存在。所以理论山来说我们应该保持容器存储层无状态化， 不应该在容器存储层存储任何数据， 而应使用数据卷或者直接写入宿主机。</p>
+<blockquote>
+<p>仓库（Repository）</p>
+</blockquote>
+<p>Docker仓库用来存放镜像的位置， Docker提供一个注册服务器来保存多个仓库。每个仓库可以包含不同的镜像，镜像利用tag区分。默认Docker Repository 是官方的Docker Hub， 当然你也可以自己搭建一个自己的私有Docker Repository用于存放自己的仓库。使用上和我们常用的Github没什么差别。</p>
+<h4 id="Docker安装"><a href="#Docker安装" class="headerlink" title="Docker安装"></a>Docker安装</h4><p>目前Docker主要有两个版本： 社区版Docker CE， 企业版： Docker EE，安装只针对CE版本的</p>
+<blockquote>
+<p>mac安装</p>
+</blockquote>
+<ul>
+<li>利用homebrew安装</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install docker</span><br></pre></td></tr></table></figure>
+<ul>
+<li>直接下载dmg    [mac下载][<a href="https://docs.docker.com/docker-for-mac/install/]" target="_blank" rel="noopener">https://docs.docker.com/docker-for-mac/install/]</a> （个人推荐， 因为前面一个我试过， 没成功。。。）</li>
+</ul>
+<p>其他去官网下载对应版本[其他][<a href="https://docs.docker.com/install/]" target="_blank" rel="noopener">https://docs.docker.com/install/]</a></p>
+<p>手动下载的，下载之后找到对应图标，打开对应的图标</p>
+<p><img src="/2019/01/01/Docker入门实践/docker-install.jpg" alt="图标"></p>
+<p>然后在菜单栏上就能看到一个小小的图标。</p>
+<p><img src="/2019/01/01/Docker入门实践/logo.jpg" alt="logo"></p>
+<p>启动终端后，通过命令可以检查安装后的 Docker 版本。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ docker --version</span><br><span class="line">Docker version 18.09.0, build 4d60db4</span><br><span class="line">$ docker-compose --version</span><br><span class="line">docker-compose version 1.23.2, build 1110ad01</span><br><span class="line">$ docker-machine --version</span><br><span class="line">docker-machine version 0.16.0, build 702c267f</span><br></pre></td></tr></table></figure>
+<p>由于国内网速的原因， 我们下载Docker之后，最好去配置一下镜像加速器，国内常用的是以下两个， 你也可以找其他的地址去配置。</p>
+<ul>
+<li><a href="https://docs.docker.com/registry/recipes/mirror/#use-case-the-china-registry-mirror" target="_blank" rel="noopener">Docker 官方提供的中国 registry mirror <code>https://registry.docker-cn.com</code></a></li>
+<li><a href="https://kirk-enterprise.github.io/hub-docs/#/user-guide/mirror" target="_blank" rel="noopener">七牛云加速器 <code>https://reg-mirror.qiniu.com/</code></a></li>
+</ul>
+<p>macOS： 在任务栏点击 Docker for mac 应用图标 -&gt; Perferences… -&gt; Daemon -&gt; Registry mirrors。在列表中填写加速器地址 <code>https://registry.docker-cn.com</code>。修改完成之后，点击 <code>Apply &amp; Restart</code> 按钮，Docker 就会重启并应用配置的镜像地址了。</p>
+<p>检查是否配置成功可以使用以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker info</span><br><span class="line">Registry Mirrors:</span><br><span class="line"> https://registry.docker-cn.com/</span><br></pre></td></tr></table></figure>
+<h4 id="Docker常用命令"><a href="#Docker常用命令" class="headerlink" title="Docker常用命令"></a>Docker常用命令</h4><blockquote>
+<p>镜像</p>
+</blockquote>
+<ul>
+<li><p>获取镜像</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ docker image pull [Registry]/[imageName]:[tag] <span class="comment">#Registry默认都是library， 可不加</span></span><br><span class="line"><span class="comment"># tag 不加默认latest</span></span><br><span class="line">$ docker image pull ubuntu</span><br><span class="line">    <span class="comment"># Using default tag: latest</span></span><br><span class="line">    <span class="comment"># latest: Pulling from library/ubuntu</span></span><br><span class="line">    <span class="comment"># Digest: sha256:6d0e0c26489e33f5a6f0020edface2727db9489744ecc9b4f50c7fa671f23c49</span></span><br><span class="line">    <span class="comment"># Status: Downloaded newer image for ubuntu:latest</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列出镜像</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ docker image ls [OPTIONS] [REPOSITORY[:TAG]]</span><br><span class="line"><span class="comment">#实例</span></span><br><span class="line">$ docker image ls 或者 $ docker images</span><br><span class="line">$ docker image ls -a <span class="comment">#列出所有镜像(包括为none的)</span></span><br><span class="line">$ docker image ls --digests <span class="comment">#列出所有镜像(包括为none的)</span></span><br><span class="line">$ docker image ls node <span class="comment">#列出所有的node镜像</span></span><br><span class="line">$ docker image ls -f &lt;条件&gt; <span class="comment">#以指定条件列出</span></span><br><span class="line">$ docker image ls --format <span class="string">'&#123;&#123;.Repository&#125;&#125;  &#123;&#123;.ID&#125;&#125;  &#123;&#123;.Size&#125;&#125;'</span> <span class="comment">#格式化输出</span></span><br><span class="line">$ docker image ls -q <span class="comment">#只列出Image ID</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#可以用docker image ls --help 查看所有的命令</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除镜像</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ docker image rm [OPTIONS] IMAGE [IMAGE...]</span><br><span class="line"><span class="comment"># 注： IMAGE 可以是 镜像名， 或者长ID，或者短ID， 也可以是digests</span></span><br><span class="line"><span class="comment"># 实例</span></span><br><span class="line">$ docker image rm ubuntu <span class="comment"># 删除标签为latest的ubuntu镜像</span></span><br><span class="line">$ docker image rm -f ubuntu <span class="comment">#强制删除标签为latest的ubuntu镜像</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以配合ls命令删除多个镜像</span></span><br><span class="line">$ docker image rm $(docker image ls -q ubuntu)</span><br><span class="line"></span><br><span class="line">$ docker image prune <span class="comment"># 删除所有未使用的镜像</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>容器</p>
+</blockquote>
+<ul>
+<li><p>查看当前容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker container ls <span class="comment"># 列出正在运行的容器</span></span><br><span class="line">$ docker container ls -a <span class="comment">#列出所有容器</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#其他命令可使用 $ docker container ls --help</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]</span><br><span class="line"></span><br><span class="line"><span class="comment">#实例</span></span><br><span class="line">$ docker container run --name -dit ubuntu bash</span><br><span class="line">$ docker container run -p 8000:3000 ...</span><br><span class="line"><span class="comment"># 参数意义</span></span><br><span class="line">--name: 指定容器的名称</span><br><span class="line">-it: 容器的 Shell 映射到当前的 Shell，然后你在本机窗口输入的命令，就会传入容器。</span><br><span class="line">-d:  后台运行， 不把输出打印在宿主机上</span><br><span class="line">-p:  将容器的3000端口映射到宿主机的8000端口</span><br><span class="line"></span><br><span class="line">$ docker container start &lt;Container ID/NAMES&gt; <span class="comment"># 重新启动已经终止的容器</span></span><br><span class="line">$ docker container restart &lt;Container ID/NAMES&gt; <span class="comment"># 重启运行中的容器</span></span><br></pre></td></tr></table></figure>
+<p>对于进入后台运行的容器， 要再次进入容器，可以采用以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker container attach &lt;Container ID/NAMES&gt; </span><br><span class="line"></span><br><span class="line">$ docker <span class="built_in">exec</span> [OPTIONS] &lt;Container ID/NAMES&gt; &lt;COMMAND&gt;</span><br></pre></td></tr></table></figure>
+<p>两者的区别在于attach进入容器后exit退出时会终止容器， exec不会</p>
+</li>
+<li><p>终止容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker container stop &lt;Container ID/NAMES&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ docker container rm &lt;Container ID/NAMES&gt; [Container ID/NAMES, ...] <span class="comment">#删除终止的容器</span></span><br><span class="line"></span><br><span class="line">$ docker container rm -f &lt;Container ID/NAMES&gt; [Container ID/NAMES, ...] <span class="comment">#删除运行中的容器</span></span><br><span class="line"></span><br><span class="line">$ docker container prune <span class="comment">#删除所有终止的容器</span></span><br></pre></td></tr></table></figure>
+<p><strong><em>tip</em></strong>： 由于我们经常使用docker image以及docker container命令，我们可以配置别名方便我们使用。</p>
+</li>
+</ul>
+<h4 id="Dockfile文件"><a href="#Dockfile文件" class="headerlink" title="Dockfile文件"></a>Dockfile文件</h4><p>​    了解了前面所说的基本命令之后， 我们已经学会怎么去使用image文件， 以及依赖image文件实例化生成容器。那么问题来了， 我们该怎么去定制属于自己的image， 这个时候就需要Dockerfile文件了。</p>
+<p>​    Dockerfile是一个文本文件， 其内部写入了一条条指令，<strong>每一条指令构建一层</strong>。因此，每一条指令都是用于描述如何构建这一层。</p>
+<p><strong>Dockerfile基本指令：</strong></p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FROM</td>
+<td>指定基础镜像，必备指令，且必须是第一条</td>
+</tr>
+<tr>
+<td>RUN</td>
+<td>执行命令： 执行方式  1. RUN  &lt;shell命令&gt;   2.  RUN [“可执行文件”, “参数1”, “参数2”]</td>
+</tr>
+<tr>
+<td>COPY</td>
+<td>复制文件 COPY [–chown=&lt; user &gt;:&lt; group  &gt;] &lt;源文件&gt;… ,目标文件</td>
+</tr>
+<tr>
+<td>WORKDIR</td>
+<td>指定工作目录</td>
+</tr>
+<tr>
+<td>EXPOSE</td>
+<td>暴露端口出去给外部使用</td>
+</tr>
+<tr>
+<td>CMD</td>
+<td>指定默认执行命令（如果在运行容器时镜像 后面加上命令会覆盖）</td>
+</tr>
+</tbody>
+</table>
+<h4 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h4><p>了解了一些基本命令后， 下面我们就可以一步步的构建属于自己的镜像。</p>
+<p><strong>目的： 实现在Docker容器里面启动nginx服务， 运行react项目</strong></p>
+<ol>
+<li><p>新建一个react项目， 可以使用create-react-app快速生成一个react项目demo，执行命令</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install &amp;&amp; npm run build</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置nginx文件</p>
+<p>配置文件可以在网上找， 也可以拷贝本地的配置（本地安装nginx， 我的配置文件是在/usr/local/etc/nginx/目录下面），拷贝ngixn.conf配置文件到项目根目录下。</p>
+<p><img src="/2019/01/01/Docker入门实践/nginx.jpg" alt="配置截图"></p>
+</li>
+<li><p>编写Dockerfile文件</p>
+<p>在项目根目录下面新建Dockerfile文件，在里面输入内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FROM nginx <span class="comment"># 使用最新的nginx镜像（可使用 docker search nginx 查看所有的nginx镜像）</span></span><br><span class="line"></span><br><span class="line">COPY nginx.conf /etc/nginx/nginx.conf <span class="comment"># 复制配置文件到容器的 /etc/nginx/目录下并替换nginx.conf 文件</span></span><br><span class="line"></span><br><span class="line">COPY build/ /app/docker-nginx/  <span class="comment"># 将打包的项目文件拷贝到nginx root目录下</span></span><br><span class="line"></span><br><span class="line">CMD [<span class="string">"nginx"</span>, <span class="string">"-s"</span>, <span class="string">"daemon off;"</span>] <span class="comment"># 启动nginx (可不写)</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生成image文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker build -t dc-ng .</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">$ docker image build -t dc-ng .</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>-t  dc-ng</strong> 指定生成的镜像名称， 名称后面可以通过冒号指定标签名称，eg：-t dc-ng:1.0.0， 不加默认latest</li>
+<li><strong>.</strong>  指定命令执行上下文路径（<strong>⚠️</strong> 并不是指定Dockerfile文件所在路径）， 关系到COPY等操作的正确性，这里指Dockerfile文件所在目录下</li>
+</ul>
+<p>这个时候你可以在命令行中执行 docker image ls 可以看到</p>
+</li>
+</ol>
+<p>​    <img src="/2019/01/01/Docker入门实践/imagels.jpg" alt="imgaels"></p>
+<ol start="5">
+<li><p>生成容器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker run --name dc-ng -p 3001:3000 -d dc-ng</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">$ docker container --name dc-ng -p 3001:3000 -d dc-ng</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>–name dc-ng</strong>：指定容器名称为 dc-ng</li>
+<li><strong>-p 3001:3000</strong>：将容器的3000端口映射到宿主机的3001端口</li>
+<li><p><strong>-d</strong>：后台运行</p>
+<p>执行成功会返回一个containerID， 此时执行命令 <strong>docker container ls</strong></p>
+</li>
+</ul>
+<p><img src="/2019/01/01/Docker入门实践/container.jpg" alt="container"></p>
+<p>此时在浏览器中输入 [localhost:3001][localhost:3001] 或者 [0.0.0.0:3001][0.0.0.0:3001] 或者 p:3001 </p>
+<p>【效果图】</p>
+</li>
+<li><p>OK，到这里我们基本上已经完成了一个image的制作， 并成功的运行了一个容器。证明我们的image 还是有点效果的，这个时候我们就可以考虑把image文件发布到网上供其他人下载使用。</p>
+<ul>
+<li><p>首先我们要去[Docker Hub][<a href="https://hub.docker.com/]上注册一个自己的私人账号" target="_blank" rel="noopener">https://hub.docker.com/]上注册一个自己的私人账号</a></p>
+</li>
+<li><p>为本地镜像生成一个新的标签（也可以不用）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]</span><br><span class="line"><span class="comment"># 实例</span></span><br><span class="line">$ docker tag dc-ng:latest gllzcd/dc-ng:1.0.0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>push到远程仓库</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker image push [username]/[repository]:[tag]</span><br><span class="line"><span class="comment"># 实例</span></span><br><span class="line">$ docker image push gllzcd/dc-ng:1.0.0</span><br></pre></td></tr></table></figure>
+<p>正常情况下会有这个提示</p>
+<p><img src="/2019/01/01/Docker入门实践/image-push.jpg" alt="上传成功"></p>
+<p>然后我们登录 hub.docker.com， 在个人的文件目录下面下就可以看到已经存在</p>
+<p><img src="/2019/01/01/Docker入门实践/docker-hub.jpg" alt="success"></p>
+<p>红色部分就是我们刚生成的image文件。</p>
+<p><strong>然后关掉浏览器，打开命令行， 执行 sudo shutdown -h now, 收工</strong></p>
+</li>
+</ul>
+</li>
+</ol>
+<p><em>参考链接：</em></p>
+<ol>
+<li><a href="http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html</a></li>
+<li><a href="https://github.com/yeasy/docker_practice" target="_blank" rel="noopener">https://github.com/yeasy/docker_practice</a></li>
+</ol>
 
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/01/01/Docker入门实践/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-  
-    </div></section>
+
   
 
-    
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -198,8 +473,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
