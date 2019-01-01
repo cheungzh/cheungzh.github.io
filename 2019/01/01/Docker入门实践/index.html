@@ -55,8 +55,14 @@
   .intrude-less a {
     color: #fff;
   }
+  .left-col .intrude-less {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+  }
    .left-col {
-     /* background-color: #434953; */
      background-color:#444a4f;
    }
   .left-col #header .header-menu {
@@ -77,6 +83,7 @@
   .left-col #header .header-author {
     font-size: 20px;
     margin: 0;
+    margin-top: 10px;
   }
   .left-col #header .header-author a {
     color: #fff;
@@ -89,8 +96,6 @@
     margin-bottom: 0;
   }
 </style>
-
-<div class="overlay" style="background: #434953"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -209,6 +214,16 @@
   .article-header {
     border-left-color: #409eff;
     padding: 20px 0 15px 44px;
+  }
+  .article-more-link a {
+    color: #409eff;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 14px;
+  }
+  .article-more-link a:hover {
+    background-color: transparent;
+    border-color: transparent;
   }
 </style>
 <article id="post-Docker入门实践" class="article article-type-post " itemscope="" itemprop="blogPost">
