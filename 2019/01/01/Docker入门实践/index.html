@@ -23,7 +23,7 @@
 <meta property="og:image" content="http://yoursite.com/2019/01/01/Docker入门实践/container.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/01/01/Docker入门实践/image-push.jpg">
 <meta property="og:image" content="http://yoursite.com/2019/01/01/Docker入门实践/docker-hub.jpg">
-<meta property="og:updated_time" content="2019-01-01T07:02:49.293Z">
+<meta property="og:updated_time" content="2019-01-01T12:09:30.052Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker入门实践">
 <meta name="twitter:description" content="​Docker是一种新兴的虚拟化技术， 属于 Linux 容器的一种封装，提供简单易用的容器使用接口。从某种程度上可以理解成一个小型的虚拟机。 相比较于传统的虚拟机它有着：  启动时间快：Docker容器应用直接运行与宿主内核，不需要启动完整的操作系统，因此可以做到秒级、甚至毫秒级的启动时间。大大的节约了开发、测试、部署的时间。 更高效的利用系统资源：容器只占用需要的资源，不占用那些没有用到的资源">
@@ -51,8 +51,46 @@
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
-      
-<div class="overlay" style="background: #4d4d4d"></div>
+      <style>
+  .intrude-less a {
+    color: #fff;
+  }
+   .left-col {
+     /* background-color: #434953; */
+     background-color:#444a4f;
+   }
+  .left-col #header .header-menu {
+    height: auto;
+    min-height: auto;
+    margin-top: 20px;
+  }
+  .submenu-item {
+    display: inline-block;
+  }
+  .left-col #header .submenu-item a {
+    color: #fff;
+  }
+  .left-col #header .submenu-item a:hover {
+    /* color: #409eff; */
+    color: rgb(255, 208, 75);
+  }
+  .left-col #header .header-author {
+    font-size: 20px;
+    margin: 0;
+  }
+  .left-col #header .header-author a {
+    color: #fff;
+  }
+  .header-author__desc {
+    font-size: 12px;
+    color: #ccc;
+  }
+  .left-col #header .header-smart-menu {
+    margin-bottom: 0;
+  }
+</style>
+
+<div class="overlay" style="background: #434953"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -63,22 +101,27 @@
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">郭魏魏</a></h1>
+      <h3 class="header-author__desc">个人小站</h3>
 		</hgroup>
 		
 
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">主页</a></li>
+				<li class="submenu-item"><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li class="submenu-item"><a href="/tags/tag/">标签</a></li>
+	        
+				<li class="submenu-item"><a href="/">所有文章</a></li>
+	        
+				<li class="submenu-item"><a href="/">关于我</a></li>
 	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+            
     			
             
 		</nav>
@@ -86,6 +129,8 @@
 			<div class="social">
 				
 					<a class="github" target="_blank" href="https://github.com/cheungzh/cheungzh.github.io" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto: 1113855011@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -96,7 +141,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #434953"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -115,6 +160,10 @@
 			
 				
 			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -122,16 +171,22 @@
 					
 						<a class="github" target="_blank" href="https://github.com/cheungzh/cheungzh.github.io" title="github"><i class="icon-github"></i></a>
 			        
+						<a class="mail" target="_blank" href="mailto: 1113855011@qq.com" title="mail"><i class="icon-mail"></i></a>
+			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/tags/tag/">标签</a></li>
+		        
+					<li style="width: 25%"><a href="/">所有文章</a></li>
+		        
+					<li style="width: 25%"><a href="/">关于我</a></li>
 		        
 				</ul>
 			</nav>
@@ -146,7 +201,17 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Docker入门实践" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <style>
+  .article {
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  }
+  .article-header {
+    border-left-color: #409eff;
+    padding: 20px 0 15px 44px;
+  }
+</style>
+<article id="post-Docker入门实践" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -202,9 +267,9 @@
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew cask install docker</span><br></pre></td></tr></table></figure>
 <ul>
-<li>直接下载dmg    [mac下载][<a href="https://docs.docker.com/docker-for-mac/install/]" target="_blank" rel="noopener">https://docs.docker.com/docker-for-mac/install/]</a> （个人推荐， 因为前面一个我试过， 没成功。。。）</li>
+<li>直接下载dmg    <a href="https://docs.docker.com/docker-for-mac/install/" target="_blank" rel="noopener">mac下载</a> （个人推荐， 因为前面一个我试过， 没成功。。。）</li>
 </ul>
-<p>其他去官网下载对应版本[其他][<a href="https://docs.docker.com/install/]" target="_blank" rel="noopener">https://docs.docker.com/install/]</a></p>
+<p>其他去官网下载对应版本<a href="https://docs.docker.com/install/" target="_blank" rel="noopener">其他</a></p>
 <p>手动下载的，下载之后找到对应图标，打开对应的图标</p>
 <p><img src="/2019/01/01/Docker入门实践/docker-install.jpg" alt="图标"></p>
 <p>然后在菜单栏上就能看到一个小小的图标。</p>
@@ -293,45 +358,38 @@
 </table>
 <h4 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h4><p>了解了一些基本命令后， 下面我们就可以一步步的构建属于自己的镜像。</p>
 <p><strong>目的： 实现在Docker容器里面启动nginx服务， 运行react项目</strong></p>
-<ol>
-<li><p>新建一个react项目， 可以使用create-react-app快速生成一个react项目demo，执行命令</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install &amp;&amp; npm run build</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置nginx文件</p>
-<p>配置文件可以在网上找， 也可以拷贝本地的配置（本地安装nginx， 我的配置文件是在/usr/local/etc/nginx/目录下面），拷贝ngixn.conf配置文件到项目根目录下。</p>
-<p><img src="/2019/01/01/Docker入门实践/nginx.jpg" alt="配置截图"></p>
-</li>
-<li><p>编写Dockerfile文件</p>
-<p>在项目根目录下面新建Dockerfile文件，在里面输入内容：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FROM nginx <span class="comment"># 使用最新的nginx镜像（可使用 docker search nginx 查看所有的nginx镜像）</span></span><br><span class="line"></span><br><span class="line">COPY nginx.conf /etc/nginx/nginx.conf <span class="comment"># 复制配置文件到容器的 /etc/nginx/目录下并替换nginx.conf 文件</span></span><br><span class="line"></span><br><span class="line">COPY build/ /app/docker-nginx/  <span class="comment"># 将打包的项目文件拷贝到nginx root目录下</span></span><br><span class="line"></span><br><span class="line">CMD [<span class="string">"nginx"</span>, <span class="string">"-s"</span>, <span class="string">"daemon off;"</span>] <span class="comment"># 启动nginx (可不写)</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>生成image文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker build -t dc-ng .</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">$ docker image build -t dc-ng .</span><br></pre></td></tr></table></figure>
+<p><strong>1</strong>. 新建一个react项目， 可以使用create-react-app快速生成一个react项目demo，执行命令</p>
+   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install &amp;&amp; npm run build</span><br></pre></td></tr></table></figure>
+<p><strong>2</strong>. 配置nginx文件</p>
+<p>   配置文件可以在网上找， 也可以拷贝本地的配置（本地安装nginx， 我的配置文件是在/usr/local/etc/nginx/目录下面），拷贝ngixn.conf配置文件到项目根目录下。</p>
+<p>   <img src="/2019/01/01/Docker入门实践/nginx.jpg" alt="配置截图"></p>
+<p><strong>3</strong>. 编写Dockerfile文件</p>
+<p>   在项目根目录下面新建Dockerfile文件，在里面输入内容：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">FROM nginx <span class="comment"># 使用最新的nginx镜像（可使用 docker search nginx 查看所有的nginx镜像）</span></span><br><span class="line"></span><br><span class="line">COPY nginx.conf /etc/nginx/nginx.conf <span class="comment"># 复制配置文件到容器的 /etc/nginx/目录下并替换nginx.conf 文件</span></span><br><span class="line"></span><br><span class="line">COPY build/ /app/docker-nginx/  <span class="comment"># 将打包的项目文件拷贝到nginx root目录下</span></span><br><span class="line"></span><br><span class="line">CMD [<span class="string">"nginx"</span>, <span class="string">"-s"</span>, <span class="string">"daemon off;"</span>] <span class="comment"># 启动nginx (可不写)</span></span><br></pre></td></tr></table></figure>
+<p><strong>4</strong>. 生成image文件</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker build -t dc-ng .</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">$ docker image build -t dc-ng .</span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>-t  dc-ng</strong> 指定生成的镜像名称， 名称后面可以通过冒号指定标签名称，eg：-t dc-ng:1.0.0， 不加默认latest</li>
-<li><strong>.</strong>  指定命令执行上下文路径（<strong>⚠️</strong> 并不是指定Dockerfile文件所在路径）， 关系到COPY等操作的正确性，这里指Dockerfile文件所在目录下</li>
-</ul>
+<li><p><strong>.</strong>  指定命令执行上下文路径（<strong>⚠️</strong> 并不是指定Dockerfile文件所在路径）， 关系到COPY等操作的正确性，这里指Dockerfile文件所在目录下</p>
 <p>这个时候你可以在命令行中执行 docker image ls 可以看到</p>
 </li>
-</ol>
+</ul>
 <p>​    <img src="/2019/01/01/Docker入门实践/imagels.jpg" alt="imgaels"></p>
-<ol start="5">
-<li><p>生成容器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker run --name dc-ng -p 3001:3000 -d dc-ng</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">$ docker container --name dc-ng -p 3001:3000 -d dc-ng</span><br></pre></td></tr></table></figure>
+<p><strong>5</strong>. 生成容器</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker run --name dc-ng -p 3001:3000 -d dc-ng</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">$ docker container --name dc-ng -p 3001:3000 -d dc-ng</span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>–name dc-ng</strong>：指定容器名称为 dc-ng</li>
 <li><strong>-p 3001:3000</strong>：将容器的3000端口映射到宿主机的3001端口</li>
 <li><p><strong>-d</strong>：后台运行</p>
 <p>执行成功会返回一个containerID， 此时执行命令 <strong>docker container ls</strong></p>
-</li>
-</ul>
 <p><img src="/2019/01/01/Docker入门实践/container.jpg" alt="container"></p>
 <p>此时在浏览器中输入 [localhost:3001][localhost:3001] 或者 [0.0.0.0:3001][0.0.0.0:3001] 或者 p:3001 </p>
 <p>【效果图】</p>
 </li>
-<li><p>OK，到这里我们基本上已经完成了一个image的制作， 并成功的运行了一个容器。证明我们的image 还是有点效果的，这个时候我们就可以考虑把image文件发布到网上供其他人下载使用。</p>
+</ul>
+<p><strong>6</strong>. OK，到这里我们基本上已经完成了一个image的制作， 并成功的运行了一个容器。证明我们的image 还是有点效果的，这个时候我们就可以考虑把image文件发布到网上供其他人下载使用。</p>
 <ul>
-<li><p>首先我们要去[Docker Hub][<a href="https://hub.docker.com/]上注册一个自己的私人账号" target="_blank" rel="noopener">https://hub.docker.com/]上注册一个自己的私人账号</a></p>
+<li><p>首先我们要去<a href="https://hub.docker.com/" target="_blank" rel="noopener">Docker Hub</a>上注册一个自己的私人账号</p>
 </li>
 <li><p>为本地镜像生成一个新的标签（也可以不用）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]</span><br><span class="line"><span class="comment"># 实例</span></span><br><span class="line">$ docker tag dc-ng:latest gllzcd/dc-ng:1.0.0</span><br></pre></td></tr></table></figure>
@@ -340,14 +398,12 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker image push [username]/[repository]:[tag]</span><br><span class="line"><span class="comment"># 实例</span></span><br><span class="line">$ docker image push gllzcd/dc-ng:1.0.0</span><br></pre></td></tr></table></figure>
 <p>正常情况下会有这个提示</p>
 <p><img src="/2019/01/01/Docker入门实践/image-push.jpg" alt="上传成功"></p>
-<p>然后我们登录 hub.docker.com， 在个人的文件目录下面下就可以看到已经存在</p>
+<p>然后我们登录<a href="hub.docker.com">hub.docker.com</a>,在个人的文件目录下面下就可以看到已经存在</p>
 <p><img src="/2019/01/01/Docker入门实践/docker-hub.jpg" alt="success"></p>
 <p>红色部分就是我们刚生成的image文件。</p>
 <p><strong>然后关掉浏览器，打开命令行， 执行 sudo shutdown -h now, 收工</strong></p>
 </li>
 </ul>
-</li>
-</ol>
 <p><em>参考链接：</em></p>
 <ol>
 <li><a href="http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2018/02/docker-tutorial.html</a></li>
@@ -437,6 +493,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Docker用途"><span class="toc-number">1.</span> <span class="toc-text">Docker用途</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基本概念"><span class="toc-number">2.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Docker安装"><span class="toc-number">3.</span> <span class="toc-text">Docker安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Docker常用命令"><span class="toc-number">4.</span> <span class="toc-text">Docker常用命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Dockfile文件"><span class="toc-number">5.</span> <span class="toc-text">Dockfile文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#实践"><span class="toc-number">6.</span> <span class="toc-text">实践</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -497,7 +566,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      
+    
       
     
     
@@ -506,7 +575,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 100%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+        
       
         
     </ul>
@@ -516,12 +585,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
     
 
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
-  	  	
-    	</section>
     
   </div>
   

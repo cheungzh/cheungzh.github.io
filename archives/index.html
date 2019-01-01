@@ -38,8 +38,46 @@
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
-      
-<div class="overlay" style="background: #4d4d4d"></div>
+      <style>
+  .intrude-less a {
+    color: #fff;
+  }
+   .left-col {
+     /* background-color: #434953; */
+     background-color:#444a4f;
+   }
+  .left-col #header .header-menu {
+    height: auto;
+    min-height: auto;
+    margin-top: 20px;
+  }
+  .submenu-item {
+    display: inline-block;
+  }
+  .left-col #header .submenu-item a {
+    color: #fff;
+  }
+  .left-col #header .submenu-item a:hover {
+    /* color: #409eff; */
+    color: rgb(255, 208, 75);
+  }
+  .left-col #header .header-author {
+    font-size: 20px;
+    margin: 0;
+  }
+  .left-col #header .header-author a {
+    color: #fff;
+  }
+  .header-author__desc {
+    font-size: 12px;
+    color: #ccc;
+  }
+  .left-col #header .header-smart-menu {
+    margin-bottom: 0;
+  }
+</style>
+
+<div class="overlay" style="background: #434953"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -50,22 +88,27 @@
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">郭魏魏</a></h1>
+      <h3 class="header-author__desc">个人小站</h3>
 		</hgroup>
 		
 
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="/">主页</a></li>
+				<li class="submenu-item"><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li class="submenu-item"><a href="/tags/tag/">标签</a></li>
+	        
+				<li class="submenu-item"><a href="/">所有文章</a></li>
+	        
+				<li class="submenu-item"><a href="/">关于我</a></li>
 	        
 			</ul>
 		</nav>
 		<nav class="header-smart-menu">
     		
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+            
     			
             
 		</nav>
@@ -73,6 +116,8 @@
 			<div class="social">
 				
 					<a class="github" target="_blank" href="https://github.com/cheungzh/cheungzh.github.io" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="mail" target="_blank" href="mailto: 1113855011@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -83,7 +128,7 @@
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       
 <nav id="mobile-nav">
-  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+  	<div class="overlay js-overlay" style="background: #434953"></div>
 	<div class="btnctn js-mobile-btnctn">
   		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
 	</div>
@@ -102,6 +147,10 @@
 			
 				
 			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -109,16 +158,22 @@
 					
 						<a class="github" target="_blank" href="https://github.com/cheungzh/cheungzh.github.io" title="github"><i class="icon-github"></i></a>
 			        
+						<a class="mail" target="_blank" href="mailto: 1113855011@qq.com" title="mail"><i class="icon-mail"></i></a>
+			        
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/tags/tag/">标签</a></li>
+		        
+					<li style="width: 25%"><a href="/">所有文章</a></li>
+		        
+					<li style="width: 25%"><a href="/">关于我</a></li>
 		        
 				</ul>
 			</nav>
@@ -222,7 +277,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      
+    
       
     
     
@@ -231,7 +286,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     
       
-      <li style="width: 100%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+        
       
         
     </ul>
@@ -241,12 +296,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
     
 
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
-  	  	
-    	</section>
     
   </div>
   
